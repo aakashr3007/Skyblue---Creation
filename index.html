@@ -284,31 +284,42 @@
         </div>
 
         <!-- Contact Form -->
-        <form action="https://formspree.io/f/xnjyebpn" method="POST">
-
-          <input type="text" name="name" placeholder="Your Name" required>
-
-          <input type="email" name="email" placeholder="your@email.com" required>
-
-          <input type="tel" name="phone" placeholder="+91 9159394075" required>
-
-          <select name="service" required>
-            <option value="">Select a Service</option>
-            <option>Photo Editing</option>
-            <option>Video Editing</option>
-            <option>Album Design</option>
-            <option>Photo Frame Design</option>
-            <option>Logo Design</option>
-            <option>YouTube Shorts Editing</option>
-            <option>Reels Editing</option>
-          </select>
-
-          <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-
-          <button type="submit">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xnjyebpn" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 987654321" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" required>
+              <option value="">— Select a Service —</option>
+              <option>Photo Editing</option>
+              <option>Video Editing</option>
+              <option>Album Design</option>
+              <option>Photo Frame Design</option>
+              <option>Logo Design</option>
+              <option>YouTube Shorts Editing</option>
+              <option>Reels Editing</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" rows="5"
+              placeholder="Tell us about your project, deadline, and any specific requirements..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-submit" id="submitBtn">
             Send Message ✉️
           </button>
-
         </form>
       </div>
     </div>
